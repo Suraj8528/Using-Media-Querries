@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- animation short hand property -->
+    <style>
+        h1{
+            animation: h 2s ease infinite ;
+        }
+        @keyframes h {
+            from{
+                background-color: deeppink;
+                color:white;
+            }
+            to{
+                background-color: yellow;
+                color:red;
+            }
+        }
+        body{
+            background-color: yellow;
+          
+        }
+        div::after{
+           content:'Normal Content' ;
+           color:red;
+           font-weight:bold;
+        }
+        @media (max-width:600px)
+    {
+        body{
+            background-color: blue;
+            color:white;
+        }
+        div::after{
+            content:'Design will be changed beyond 600px';
+        }
+    }
+    @media (min-width:900px)
+    {
+        body{
+            background-color: purple;
+            color:yellow;
+            font-weight:bold;
+        }
+        div::after{
+            content:'width is either 900px or more than 900px';
+        }
+    }
+    </style>
+</head>
+<body>
+    <h1>Media Queries</h1>
+    <details>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ad facilis laudantium optio cum sint saepe dolores error asperiores beatae? <summary>About Suraj</summary></details>
+    <div></div>
+</body>
+</html>
